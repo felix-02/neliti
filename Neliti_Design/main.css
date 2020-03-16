@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background-primary: #f4eeff;
+  --background-secondary: #dcd6f7;
+  --text-primary: #a6b1e1;
+  --text-secondary: #424874;
+  --border: #fffdf9;
+  --header-height: 16vh;
+  --search-wrap-height: 6vh;
+  --nav-link-height: 10vh;
+  --font-size-text: 1.2rem;
+  --font-size-input: 1.2rem;
+}
+
+header {
+  height: var(--header-height);
+  position: fixed;
+}
+.search-wrap {
+  display: flex;
+  height: var(--search-wrap-height);
+  background-color: var(--background-primary);
+}
+.search-wrap > div:nth-child(2) {
+  margin-left: auto;
+}
+.search-wrap .logo {
+  width: 5vw;
+}
+.search-wrap .logo img {
+  height: 100%;
+  width: 100%;
+}
+.search-wrap .search {
+  width: 20vw;
+  position: relative;
+}
+.search-wrap .search input {
+  width: 100%;
+  height: 100%;
+  font-size: var(--font-size-input);
+  outline: none;
+  padding: 5px;
+}
+form {
+  height: 100%;
+}
+.fa-search {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+.search-wrap .btn {
+  width: 5vw;
+}
+.search-wrap .btn button {
+  width: 100%;
+  height: 100%;
+  font-size: 1.1rem;
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--text-primary);
+  border: none;
+  color: var(--background-primary);
+}
+.nav-link {
+  height: var(--nav-link-height);
+  border-bottom: 1px solid #fffdf9;
+  background-color: var(--background-secondary);
+}
+.nav-link ul {
+  display: flex;
+  width: 70vw;
+  margin-right: 25vw;
+  margin-left: 5vw;
+  height: 100%;
+}
+.nav-link ul li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  background-color: inherit;
+  transition: background-color 0.2s;
+}
+.nav-link ul li a {
+  text-decoration: none;
+  font-size: var(--font-size-text);
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-secondary);
+  transition: color 0.5s;
+}
+.fa-chevron-down {
+  vertical-align: middle;
+}
+.nav-link ul li:hover {
+  background-color: var(--background-primary);
+}
+.nav-link ul li:hover a {
+  color: var(--text-primary);
+}
